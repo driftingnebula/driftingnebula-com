@@ -1,0 +1,4 @@
+[tasks.dev]
+clear = true
+command = "bunx"
+args = ["--bun", "astro", "dev"]
