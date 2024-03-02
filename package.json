@@ -1,0 +1,21 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "@bauke/eslint-config": "^0.1.5",
+    "@bauke/prettier-config": "^0.1.5",
+    "@types/bun": "^1.0.8",
+    "astro": "^4.4.9",
+    "sass": "^1.71.1",
+    "typescript": "^5.3.3",
+    "xo": "^0.57.0"
+  },
+  "prettier": "@bauke/prettier-config",
+  "xo": {
+    "extends": "@bauke/eslint-config",
+    "prettier": true,
+    "rules": {
+      "unicorn/prevent-abbreviations": "off"
+    },
+    "space": true
+  }
+}
