@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "dependencies": {
+    "modern-normalize": "^2.0.0"
+  },
   "devDependencies": {
     "@bauke/eslint-config": "^0.1.5",
     "@bauke/prettier-config": "^0.1.5",
