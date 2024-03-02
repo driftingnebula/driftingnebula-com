@@ -1,6 +1,6 @@
 [tasks.dev]
 clear = true
-command = "bunx"
+command = "bun"
 args = ["--bun", "astro", "dev"]
 
 [tasks.lint]
@@ -9,10 +9,10 @@ dependencies = ["lint-ts", "lint-scss"]
 
 [tasks.lint-ts]
 clear = true
-command = "bunx"
+command = "bun"
 args = ["xo"]
 
 [tasks.lint-scss]
 clear = true
-command = "bunx"
+command = "bun"
 args = ["--bun", "stylelint", "source/**/*.scss"]
