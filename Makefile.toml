@@ -2,3 +2,17 @@
 clear = true
 command = "bunx"
 args = ["--bun", "astro", "dev"]
+
+[tasks.lint]
+clear = true
+dependencies = ["lint-ts", "lint-scss"]
+
+[tasks.lint-ts]
+clear = true
+command = "bunx"
+args = ["xo"]
+
+[tasks.lint-scss]
+clear = true
+command = "bunx"
+args = ["--bun", "stylelint", "source/**/*.scss"]
