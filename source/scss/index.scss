@@ -1,0 +1,88 @@
+body {
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+
+  background-color: black;
+  color: white;
+}
+
+.page-header {
+  align-items: center;
+  background: center url("/interlinked/numbered/12.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+  height: 50vh;
+  padding: var(--spacing-3);
+
+  h1 {
+    display: flex;
+  }
+
+  img {
+    height: 10rem;
+
+    &.big {
+      display: unset;
+    }
+
+    &.small {
+      display: none;
+    }
+
+    @media (width <= 600px) {
+      &.big {
+        display: none;
+      }
+
+      &.small {
+        display: unset;
+      }
+    }
+  }
+}
+
+.project {
+  align-items: center;
+  background-color: #303030;
+  display: flex;
+  min-height: 400px;
+  height: 50vh;
+  padding: var(--spacing-3);
+
+  &[data-project-name="interlinked"] {
+    background: center url("/interlinked/numbered/15.png");
+    background-size: cover;
+  }
+
+  a {
+    background-color: #220575;
+    border: 1px solid black;
+    display: block;
+    padding: var(--spacing-3);
+    text-decoration: none;
+  }
+
+  h2,
+  p {
+    color: white;
+    text-shadow: 2px 2px 2px black;
+  }
+
+  .border-wrap {
+    background: conic-gradient(#ca0600, #7b68c1, #ad8f1e, #ca0600);
+    border: 1px solid black;
+    padding: var(--spacing-1);
+
+    &:hover {
+      background: white;
+      border-color: white;
+
+      a {
+        border-color: white;
+      }
+    }
+  }
+}

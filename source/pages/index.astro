@@ -1,5 +1,6 @@
 ---
 import BaseLayout, {type Props as BaseProps} from "../layouts/base.astro";
+import "../scss/index.scss";
 
 const props: BaseProps = {
   frontmatter: {
@@ -9,5 +10,31 @@ const props: BaseProps = {
 ---
 
 <BaseLayout {...props}>
-  <h1>driftingnebula</h1>
+  <header class="page-header">
+    <h1 title="driftingnebula">
+      <img
+        class="big"
+        src="/driftingnebula-shadowed.png"
+        alt="driftingnebula"
+      />
+      <img
+        class="small"
+        src="/driftingnebula-logo-shadowed.png"
+        alt="driftingnebula"
+      />
+    </h1>
+  </header>
+
+  <main class="page-main">
+    <div class="project" data-project-name="interlinked">
+      <header>
+        <div class="border-wrap">
+          <a href="/interlinked">
+            <h2>Interlinked</h2>
+            <p>Generative art with GIMP, GEGL and ImageMagick.</p>
+          </a>
+        </div>
+      </header>
+    </div>
+  </main>
 </BaseLayout>
