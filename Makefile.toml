@@ -1,3 +1,8 @@
+[tasks.build]
+clear = true
+command = "bun"
+args = ["--bun", "astro", "build"]
+
 [tasks.dev]
 clear = true
 command = "bun"
