@@ -1,0 +1,37 @@
+---
+import sources from "../public/interlinked/sources.json";
+import "./interlinked-image.scss";
+
+/** Properties for the InterlinkedImage component. */
+export interface Props {
+  collection: "interlinked" | "numbered";
+  file: string;
+}
+
+const {collection, file} = Astro.props;
+
+const imageDirectory = collection === "interlinked" ? "/" : "/numbered";
+const imagePath = `/interlinked${imageDirectory}/${file}`;
+const name = file.slice(0, file.indexOf("."));
+
+let source: string | undefined;
+if (collection === "interlinked" && name in sources.interlinked) {
+  const location = (sources.interlinked as Record<string, string>)[name];
+  source = `${sources.interlinked.baseUrl}${location}`;
+}
+---
+
+<div class="interlinked-image">
+  <h3 class="heading">
+    {
+      source === undefined ? (
+        name
+      ) : (
+        <a class="source-link" href={source}>
+          {name}
+        </a>
+      )
+    }
+  </h3>
+  <img class="image" src={imagePath} />
+</div>

@@ -1,0 +1,17 @@
+.interlinked-image {
+  background-color: #111;
+
+  .heading {
+    padding: var(--spacing-2);
+  }
+
+  .image {
+    border: 2px solid white;
+    display: block;
+    max-width: 100%;
+  }
+
+  .source-link {
+    color: #f0f;
+  }
+}
