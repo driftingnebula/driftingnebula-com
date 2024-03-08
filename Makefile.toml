@@ -3,6 +3,12 @@ clear = true
 command = "bun"
 args = ["--bun", "astro", "build"]
 
+[tasks.deploy-netlify]
+clear = true
+command = "netlify"
+dependencies = ["lint", "build"]
+args = ["deploy", "-p", "-d", "out/", "-s", "driftingnebula-com"]
+
 [tasks.dev]
 clear = true
 command = "bun"
