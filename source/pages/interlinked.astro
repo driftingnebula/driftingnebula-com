@@ -1,0 +1,36 @@
+---
+import BaseLayout, {type Props as BaseProps} from "../layouts/base.astro";
+import InterlinkedImage from "../components/interlinked-image.astro";
+import "../scss/interlinked.scss";
+import interlinkedImages from "../public/interlinked/images.json";
+
+const props: BaseProps = {
+  frontmatter: {
+    pageTitle: "Interlinked - driftingnebula",
+  },
+};
+---
+
+<BaseLayout {...props}>
+  <header class="page-header">
+    <h1>driftingnebula</h1>
+  </header>
+
+  <main class="page-main">
+    <h2>Interlinked</h2>
+    <p>Fully reproducible images with all the operations available.</p>
+    {
+      interlinkedImages.interlinked.map((file) => (
+        <InterlinkedImage collection="interlinked" file={file} />
+      ))
+    }
+
+    <h2>Numbered</h2>
+    <p>Old images I didn't write the operations down for.</p>
+    {
+      interlinkedImages.numbered.map((file) => (
+        <InterlinkedImage collection="numbered" file={file} />
+      ))
+    }
+  </main>
+</BaseLayout>

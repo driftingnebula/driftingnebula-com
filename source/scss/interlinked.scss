@@ -1,0 +1,11 @@
+.page-header {
+  border-bottom: 4px solid white;
+  padding: var(--spacing-3);
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+}
