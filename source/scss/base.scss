@@ -14,5 +14,11 @@ html {
 }
 
 body {
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+
+  background-color: black;
+  color: white;
   font-size: 2rem;
 }
